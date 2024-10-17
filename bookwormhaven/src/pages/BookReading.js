@@ -14,9 +14,10 @@ const BookReader = () => {
   const [totalPages, setTotalPages] = useState(0); 
   const [bookTotalcontent,setTc]=useState('');
   const THRESHOLD = 3000; 
+  const apibase = process.env.REACT_APP_DB_HOST;
   const fetchBookContent = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/book-content/${bookId}`);
+      const response = await axios.get(`${apibase}/api/book-content/${bookId}`);
       const content = response.data;
         console.log("content",content)
       const totalPageCount = Math.ceil(content.length / THRESHOLD);
@@ -30,7 +31,7 @@ const BookReader = () => {
   const fetchProgressAndInitialize = async (bookContentAll) => {
     try {
       const progressResponse = await axios.get(
-        `http://localhost:3000/api/progress/progress/${readerId}/${bookId}`
+        `${apibase}/api/progress/progress/${readerId}/${bookId}`
       );
 
       if (progressResponse.data) {
@@ -40,7 +41,7 @@ const BookReader = () => {
       const end = start + THRESHOLD;
         setBookContent(bookContentAll.slice(start,end));
       } else {
-        await axios.post(`http://localhost:3000/api/progress/update`, {
+        await axios.post(`${apibase}/api/progress/update`, {
           readerId,
           bookId,
           currentPage: 1, 
@@ -68,7 +69,7 @@ const BookReader = () => {
     if (newPage > 0 && newPage <= totalPages) {
       setCurrentPage(newPage);
 
-      await axios.post(`http://localhost:3000/api/progress/update`, {
+      await axios.post(`${apibase}/api/progress/update`, {
         readerId,
         bookId,
         currentPage: newPage,

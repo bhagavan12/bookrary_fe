@@ -157,7 +157,7 @@ export default function BookCarousel({ status }) {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/progress/${status}/${readerId}`);
+                const response = await axios.get(`${process.env.REACT_APP_DB_HOST}/api/progress/${status}/${readerId}`);
                 setBooks(response.data);
             } catch (err) {
                 setError(err.message);

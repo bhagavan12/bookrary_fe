@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 const AuthorsList = () => {
     const [authors, setAuthors] = useState([]);
-
+    const apibase = process.env.REACT_APP_DB_HOST;
     useEffect(() => {
         const fetchAuthors = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/authors');
+                const response = await axios.get(`${apibase}/api/authors`);
                 setAuthors(response.data);
             } catch (error) {
                 console.error("Error fetching the authors:", error);

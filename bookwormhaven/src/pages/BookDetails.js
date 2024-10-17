@@ -15,7 +15,7 @@ export default function BookDetails() {
     const [bookshelvesc, setBookshelvesc] = useState([]);
     const [bookInShelves, setBookInShelves] = useState({});
     const [selectedBookshelf, setSelectedBookshelf] = useState(null); 
-    const base = "http://localhost:3000";
+    const base = process.env.REACT_APP_DB_HOST;
 
     useEffect(() => {
         handleFetchBookshelves();

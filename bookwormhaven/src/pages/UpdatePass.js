@@ -9,6 +9,7 @@ const UpdatePassword = ({ readerId }) => {
     const [newPassword, setNewPassword] = useState('');
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const apibase = process.env.REACT_APP_DB_HOST;
     const handlePasswordUpdate = async () => {
         if (!currentPassword || !newPassword) {
             setError('Please fill in both fields.');
@@ -16,7 +17,7 @@ const UpdatePassword = ({ readerId }) => {
         }
 
         try {
-            const response = await axios.put(`http://localhost:3000/api/readers/update-password/${readerId}`, {
+            const response = await axios.put(`${apibase}/api/readers/update-password/${readerId}`, {
                 currentPassword,
                 newPassword,
             });

@@ -1,14 +1,14 @@
 import axios from 'axios';
-
+const baseapi=process.env.REACT_APP_DB_HOST;
 const api = axios.create({
-  baseURL: 'http://localhost:3000/api',
+  baseURL: `${baseapi}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
 });
 export const loginUser = async (username, password) => {
   // try {
-    const response = await axios.post('http://localhost:3000/api/readers/login', {
+    const response = await axios.post(`${baseapi}/api/readers/login`, {
       username,
       password,
     });
@@ -29,7 +29,7 @@ export const signupUser = async (username, email, password) => {
   });
   return response.data;
 };
-const apibase = 'http://localhost:3000';
+const apibase = process.env.REACT_APP_DB_HOST;;
 
 export const fetchBooksByGenre = async (keyword) => {
   const response = await axios.get(`${apibase}/api/books/genre/${encodeURIComponent(keyword)}`);

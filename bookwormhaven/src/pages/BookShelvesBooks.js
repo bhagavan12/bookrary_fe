@@ -15,7 +15,7 @@ const Bookshelf = () => {
     const dispatch = useDispatch(); 
     const navigate = useNavigate();
     const [visible, setVisible] = useState(false);
-    const base = "http://localhost:3000"
+    const base = process.env.REACT_APP_DB_HOST;
 
     const responsiveOptions = [
         {

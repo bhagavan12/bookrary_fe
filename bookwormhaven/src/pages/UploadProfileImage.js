@@ -5,7 +5,7 @@ const UploadProfileImage = ({ readerId }) => {
     const [profileImage, setProfileImage] = useState(null);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
-    const baseimgapi = "http://localhost:3000/uploads/";
+    const baseimgapi = `${process.env.REACT_APP_DB_HOST}/uploads/`;
     const [uploadedImageUrl, setUploadedImageUrl] = useState(null);
     const handleImageUpload = async () => {
         if (!profileImage) {
@@ -17,7 +17,7 @@ const UploadProfileImage = ({ readerId }) => {
         formData.append('profileImage', profileImage);
 
         try {
-            const response = await axios.post(`http://localhost:3000/api/readers/profile/upload/${readerId}`, formData, {
+            const response = await axios.post(`${process.env.REACT_APP_DB_HOST}/api/readers/profile/upload/${readerId}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },
