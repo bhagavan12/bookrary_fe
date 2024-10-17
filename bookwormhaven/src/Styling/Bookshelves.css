@@ -2,9 +2,19 @@
     padding: 20px;
 }
 
+.bookshelf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .bookshelf-list {
+    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    width: fit-content;
+    justify-content: center;
 }
 
 .bookshelf-item {
@@ -27,8 +37,14 @@
     padding: 8px;
     margin-bottom: 10px;
 }
-#bstitle{
+
+#bstitle {
     text-align: left;
     margin-top: 0px;
 }
 
+@media(max-width:768px){
+    .bookshelf-header{
+        flex-direction: column;
+    }
+}

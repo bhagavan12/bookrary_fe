@@ -23,7 +23,7 @@ function App() {
   const user = useSelector((state) => state.user?.user.username|| localStorage.getItem('token'));
  console.log("user",user);
   return (
-    <>
+    <div>
       <Router>
       {user && <Navbar />}
         <Routes>
@@ -76,7 +76,7 @@ function App() {
           } />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

@@ -66,7 +66,7 @@ const Bookshelf = () => {
     };
     const bookTemplate = (book) => {
         return (
-            <div className="book-card" style={{ background: "rgba(255, 255, 255, 0.26)", boxShadow: " 0px 4px 30px rgba(0, 0, 0, 0.1)", backdropFilter: "blur(5px)",width:"250px" }}>
+            <div className="book-card" style={{ background: "rgba(255, 255, 255, 0.26)", boxShadow: " 0px 4px 30px rgba(0, 0, 0, 0.1)", backdropFilter: "blur(5px)",width:"250px" ,margin:"auto"}}>
                 <img src={book.cover_url} alt={book.title} className='image' />
                 <h3>{book.title}</h3>
                 <p>By: {book.authors.join(', ')}</p>
@@ -91,7 +91,7 @@ const Bookshelf = () => {
             {books.length > 0 ? (
                 <Carousel
                     value={books}
-                    numVisible={3}
+                    numVisible={4}
                     numScroll={1}
                     responsiveOptions={responsiveOptions}
                     circular

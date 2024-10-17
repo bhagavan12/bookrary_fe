@@ -86,9 +86,9 @@ export default function Landingpage() {
         <Signup />
       </Dialog>
 
-      <section className='features' ref={featuresRef}>
+      <section className='features' ref={featuresRef} >
 
-        <Fieldset legend="Features">
+        <Fieldset legend="Features" style={{marginTop:"120px"}}>
           <div className='feature-item'>
             <i className='bookshelf-icon'></i>
             <h3 className='fhead' style={{ background: "rgba(255, 255, 255, 0.26)", boxShadow: "0px 4px 30px rgba(0, 0, 0, 0.1)", backdropFilter: "blur(5px)" }}>

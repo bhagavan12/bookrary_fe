@@ -176,7 +176,7 @@ export default function BookCarousel({ status }) {
 
     const bookTemplate = (book) => {
         return (
-            <div className='book-card'>
+            <div className='book-card' style={{width:"200px",margin:"auto"}}>
                 <div className="mb-3">
                     <img src={book.cover_url} alt={book.title} className='image' style={{height:"300px"}}/>
                 </div>
@@ -202,16 +202,15 @@ export default function BookCarousel({ status }) {
     }
 
     return (
-        <div>
+        <div >
             <h2>{status == 'current' ? 'Currently Reading' : 'Completed Books'}</h2>
             <Carousel 
                 value={books} 
-                numVisible={3} 
+                numVisible={4} 
                 numScroll={1} 
                 responsiveOptions={responsiveOptions} 
                 circular
                 itemTemplate={bookTemplate} 
-                
             />
         </div>
     );

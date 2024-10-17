@@ -54,7 +54,7 @@ const BookshelfPage = () => {
     return (
         <div className="bookshelf-page">
         <Toast ref={toast} style={{height:"15px",width:"100px",padding:"0px"}}/>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className='bookshelf-header'>
                 <h2 icon="pi pi-times">{user.username}'s Bookshelves<i className="pi pi-bookmark-fill" style={{ fontSize: '1.5rem' }}></i></h2>
 
                 <Button label="Create Bookshelf" icon="pi pi-plus" onClick={() => setVisible(true)} />

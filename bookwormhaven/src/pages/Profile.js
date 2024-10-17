@@ -32,34 +32,35 @@ const Profile = () => {
                 <Card title={user.username}>
                     <div className='cardcontainer'>
                         <img src='https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2023-12/Virat%20Kohli%20Test.jpg?h=920929c4&itok=SooosmZU' className='profileimage' preview></img>
-                        <div className='tab-container'>
-                            <TabView>
-                                <TabPanel header="Reading History">
-                                    <TabView >
-                                        <TabPanel header="In Progess" className=''>
-                                            <div className="custom-carousel"> 
-                                                <ReadingHistory status={"current"} />
-                                            </div>
-                                        </TabPanel>
-                                        <TabPanel header="Completed">
-                                            <div className="custom-carousel"> 
-                                                <ReadingHistory status={"completed"} />
-                                            </div>
 
-                                        </TabPanel>
-                                    </TabView>
-                                </TabPanel>
-                                <TabPanel header="Reviews">
-
-                                </TabPanel>
-                                <TabPanel header="Update Profile">
-                                    <UploadProfileImage readerId={user.id} />
-                                    <UpdatePassword readerId={user.id} />
-                                </TabPanel>
-                            </TabView>
-                        </div>
                     </div>
                 </Card>
+                <div className='tab-container'>
+                    <TabView>
+                        <TabPanel header="Reading History">
+                            <TabView >
+                                <TabPanel header="In Progess" className=''>
+                                    <div className="custom-carousel">
+                                        <ReadingHistory status={"current"} />
+                                    </div>
+                                </TabPanel>
+                                <TabPanel header="Completed">
+                                    <div className="custom-carousel">
+                                        <ReadingHistory status={"completed"} />
+                                    </div>
+
+                                </TabPanel>
+                            </TabView>
+                        </TabPanel>
+                        <TabPanel header="Reviews">
+
+                        </TabPanel>
+                        <TabPanel header="Update Profile">
+                            <UploadProfileImage readerId={user.id} />
+                            <UpdatePassword readerId={user.id} />
+                        </TabPanel>
+                    </TabView>
+                </div>
             </div>
         </>
     );

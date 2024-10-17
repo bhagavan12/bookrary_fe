@@ -26,6 +26,7 @@ export default function SearchBar() {
 
     return (
         <div className="flex align-items-center gap-2">
+            <div className="p-inputgroup flex-1">
             <Dropdown
                 value={selectedCriteria}
                 onChange={(e) => setSelectedCriteria(e.value)}
@@ -33,6 +34,7 @@ export default function SearchBar() {
                 optionLabel="name"
                 placeholder="Select Criteria"
                 className="w-full md:w-14rem"
+                // style={{width:"10px"}}
             />
             <InputText
                 placeholder="Search"
@@ -40,11 +42,12 @@ export default function SearchBar() {
                 value={searchKeyword}
                 onChange={(e) => setSearchKeyword(e.target.value)}
                 className="w-8rem sm:w-auto"
+                // style={{width:"150px"}}
             />
             <button onClick={handleSearch} className="p-button p-component">
                 <span className="p-button-icon p-c pi pi-search"></span>
-                <span className="p-button-label">Search</span>
             </button>
+            </div>
         </div>
     );
 }
