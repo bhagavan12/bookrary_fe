@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*booklist*/
+.slidercomp{
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  box-shadow: 0.1px 1px 5px black;
+  /* height: min-content; */
+  /* border: 1px solid black; */
+  border-radius: 10px;
+}
+/*booklist*/
+
+/*progressbar*/
+.p-progressbar{
+  height: 20px;
+}
+/*progressbar*/
+
+/*athuors*/
+.acard{
+  margin-bottom: 20px;
+}
+.alist{
+  margin: 10px 40px;
+}
+.p-button{
+  text-decoration: none;
+  gap: 3px;
+}
+.heading{
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+/*athuors*/
+/*icons*/
+.arcticons--tagwriter {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' d='M39 18.62L19.81 37.79v3h3L42 21.63l-3-3m-1.85 1.82l3 3M6.21 37A3.81 3.81 0 0 1 10 40.8h0M6.21 27.22A13.58 13.58 0 0 1 19.79 40.8h0M6.21 32.2a8.61 8.61 0 0 1 8.61 8.6'/%3E%3Ccircle cx='17.17' cy='12.04' r='1.76' fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' d='M28 35.6v5.2H6.21V14.35l10.9-7.15L28 14.35v15.18m-5.27 5.34l3.01 3.01'/%3E%3C/svg%3E");
+}
+/*icons*/
+
+
+/* Main container of the toast */
+.p-toast {
+  width: 300px;
+  font-size: 0.85rem; 
+}
+
+/* Container of a message item */
+.p-toast-container {
+  padding: 4px 8px;
+}

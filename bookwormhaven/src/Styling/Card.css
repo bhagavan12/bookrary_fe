@@ -1,0 +1,12 @@
+.cardd{
+    width: 200px;
+    height: fit-content;
+    /* border: 1px solid black; */
+    padding: 2px;
+    border-radius: 12px;
+    
+}
+.image{
+    border-radius: 10px;
+    width: 100%;
+}

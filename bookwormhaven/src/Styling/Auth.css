@@ -1,0 +1,19 @@
+.login-container{
+    background: rgba(255, 255, 255, 0.66);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    
+}
+.login-container form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+}
+.login-container form input{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 50px;
+    margin-bottom: 10px;
+}

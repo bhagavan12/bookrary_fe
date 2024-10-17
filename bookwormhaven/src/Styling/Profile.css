@@ -1,0 +1,89 @@
+.profileimage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: contain;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
+}
+
+.profilecontainer {
+    padding: 10px 100px 0px 100px;
+}
+
+/* Card container layout */
+.cardcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Tab container adjustments */
+.tab-container {
+    width: 100%;          /* Set width to 100% of its parent (Card) */
+    max-width: 100%;       /* Ensure it doesn't exceed the parent's width */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    overflow-x: hidden;     /* Prevent horizontal overflow */
+    padding: 10px;          /* Optional: Add some padding */
+}
+
+/* Carousel container with custom styling */
+.custom-carousel {
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0.5px 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 2px;
+}
+
+/* Tab panel styles */
+.p-tabview-panel {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Media query for responsiveness on smaller screens */
+@media screen and (max-width: 768px) {
+    /* Adjust profile container padding */
+    .profilecontainer {
+        padding: 10px 20px;
+    }
+
+    /* Make card container stack vertically and center items */
+    .cardcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure tab container takes full width */
+    .tab-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Make carousel vertical on smaller screens */
+    .custom-carousel .p-carousel {
+        flex-direction: column;
+    }
+
+    /* Override PrimeReact carousel orientation to vertical on mobile view */
+    .p-carousel .p-carousel-content {
+        flex-direction: column;
+        height: auto; /* Adjust height for vertical layout */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+    /* Ensure carousel items are stacked vertically */
+    .p-carousel-items-content {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        overflow-y: auto;       /* Allow vertical scrolling */
+        overflow-x: hidden;     /* Disable horizontal scrolling */
+    }
+
+    /* Hide navigation buttons (left/right) for vertical scrolling */
+    .p-carousel .p-carousel-prev,
+    .p-carousel .p-carousel-next {
+        display: none; /* Hide the navigation buttons */
+    }
+}
