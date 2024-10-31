@@ -29,7 +29,7 @@ export const signupUser = async (username, email, password) => {
   });
   return response.data;
 };
-const apibase = process.env.REACT_APP_DB_HOST;;
+const apibase = process.env.REACT_APP_DB_HOST;
 
 export const fetchBooksByGenre = async (keyword) => {
   const response = await axios.get(`${apibase}/api/books/genre/${encodeURIComponent(keyword)}`);
