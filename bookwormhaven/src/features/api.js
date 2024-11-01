@@ -1,5 +1,6 @@
 import axios from 'axios';
-const baseapi=process.env.REACT_APP_DB_HOST;
+// const baseapi=process.env.REACT_APP_DB_HOST;
+const baseapi="http://localhost:3000"
 const api = axios.create({
   baseURL: `${baseapi}/api`,
   headers: {
